@@ -4,6 +4,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import SidebarChannel from './SidebarChannel';
 import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import CallIcon from '@material-ui/icons/Call';
 
 function Sidebar() {
   return (
@@ -35,9 +37,17 @@ function Sidebar() {
             className='sidebar__voiceIcon'
             font-size='large'
           />
+
           <div className="sidebar__voiceInfo">
-            
+            <h3>Voice Connected</h3>
+            <p>Stream</p>
           </div>
+
+          <div className="sidebar__voiceIcons">
+            <HelpOutlineIcon />
+            <CallIcon />
+          </div>
+
         </div>
 
       </div>    
