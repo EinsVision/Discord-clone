@@ -56,9 +56,9 @@ function Sidebar() {
       </div>
 
       <div className="sidebar__profile">
-        <Avatar />
+        <Avatar src='https://lh3.googleusercontent.com/ogw/ADGmqu9GElmcJVjw3GzbcE1wI1U9xhBf4fVroMKcCYsX=s83-c-mo'/>
         <div className="sidebar__profileInfo">
-          <h3>@einsVision</h3>
+          <h3>@EinsVision</h3>
           <p>#This is My ID.</p>
         </div>
 
