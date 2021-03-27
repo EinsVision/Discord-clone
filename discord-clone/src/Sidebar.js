@@ -31,26 +31,25 @@ function Sidebar() {
           <SidebarChannel />
           <SidebarChannel />
         </div>
+      </div>  
 
-        <div className="sidebar__voice">
-          <SignalCellularAltIcon 
-            className='sidebar__voiceIcon'
-            font-size='large'
-          />
+      <div className="sidebar__voice">
+        <SignalCellularAltIcon 
+          className='sidebar__voiceIcon'
+          font-size='large'
+        />
 
-          <div className="sidebar__voiceInfo">
-            <h3>Voice Connected</h3>
-            <p>Stream</p>
-          </div>
-
-          <div className="sidebar__voiceIcons">
-            <HelpOutlineIcon />
-            <CallIcon />
-          </div>
-
+        <div className="sidebar__voiceInfo">
+          <h3>Voice Connected</h3>
+          <p>Stream</p>
         </div>
 
-      </div>    
+        <div className="sidebar__voiceIcons">
+          <HelpOutlineIcon />
+          <CallIcon />
+        </div>
+
+      </div>
     </div>
   )
 }
