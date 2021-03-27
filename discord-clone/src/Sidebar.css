@@ -39,7 +39,8 @@
   color: gray;
 }
 
-.sidebar__voice{
+.sidebar__voice, 
+.sidebar__profile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,3 +68,15 @@
   font-size: smaller;
 }
 
+.sidebar__profileInfo {
+  flex: 1;
+  padding: 10px;
+}
+
+.sidebar__profileInfo > h3 {
+  color: white; 
+}
+
+.sidebar__profileIcons > .MuiSvgIcon-root{
+  padding: 10px;
+}
