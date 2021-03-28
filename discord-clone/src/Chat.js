@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Chat.css';
 import ChatHeader from './ChatHeader';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
@@ -14,6 +14,7 @@ function Chat() {
   const user = useSelector(selectUser);
   const channelId = useSelector(selectChannelId);
   const channelName = useSelector(selectChannelName);
+  const [input, setInput] = useState('');
 
   return (
     <div className='chat'>
@@ -28,8 +29,19 @@ function Chat() {
       <div className="chat__input">
         <AddCircleIcon fontSize='large' />
         <form>
-          <input placeholder={`Message #TestChannel`}/>
-          <button className='chat__inputButton' type='submit'>Send Message</button>
+          <input
+            value={input}
+            disabled={!channelId}
+            onChange={ (e) => setInput(e.target.value)}
+            placeholder={`Message #${channelName}`}
+          />
+          <button 
+            disabled={!channelId} 
+            className='chat__inputButton' 
+            type='submit'
+          >
+            Send Message
+          </button>
         </form>
 
         <div className="chat__inputIcons">
