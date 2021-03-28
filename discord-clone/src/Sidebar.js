@@ -10,8 +10,13 @@ import { Avatar } from '@material-ui/core';
 import MicIcon from '@material-ui/icons/Mic';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import SettingsIcon from '@material-ui/icons/Settings';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
+import { auth } from './firebase';
 
 function Sidebar() {
+  const user = useSelector(selectUser);
+
   return (
     <div className='sidebar'>
       <div className="sidebar__top">
@@ -40,7 +45,7 @@ function Sidebar() {
       <div className="sidebar__voice">
         <SignalCellularAltIcon 
           className='sidebar__voiceIcon'
-          font-size='large'
+          fontSize='large'
         />
 
         <div className="sidebar__voiceInfo">
@@ -56,10 +61,11 @@ function Sidebar() {
       </div>
 
       <div className="sidebar__profile">
-        <Avatar src='https://lh3.googleusercontent.com/ogw/ADGmqu9GElmcJVjw3GzbcE1wI1U9xhBf4fVroMKcCYsX=s83-c-mo'/>
+        <Avatar onClick={ () => auth.signOut()} src={user.photo}/>
         <div className="sidebar__profileInfo">
-          <h3>@EinsVision</h3>
-          <p>#This is My ID.</p>
+          <h3>{user.displayName}</h3>
+          <h2>{user.email}</h2>
+          <p>#{user.uid.substring(0,5)}</p>
         </div>
 
         <div className="sidebar__profileIcons">

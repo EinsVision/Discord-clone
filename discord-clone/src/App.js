@@ -26,9 +26,10 @@ function App() {
         }))
       } else {
         // the user is logged out
+        dispatch(logout({}))
       }
     })
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
